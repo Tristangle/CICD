@@ -69,7 +69,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }}
+          username: tristangle
           password: ${{ secrets.GHCR_PAT }}
 
       # 6. Pousser les images sur GHCR
@@ -77,10 +77,10 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/projetcicd-backend:latest
+          tags: ghcr.io/tristangle/projetcicd-backend:latest
 
       - name: Push frontend image to GHCR
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/projetcicd-frontend:latest
+          tags: ghcr.io/tristangle/projetcicd-frontend:latest
