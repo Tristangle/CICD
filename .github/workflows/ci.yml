@@ -59,10 +59,10 @@ jobs:
       # 4. Build des images Docker
       - name: Build backend Docker image
         run: |
-          docker build -t ghcr.io/tristangle/projetcicd-backend:latest -f backend/Dockerfile backend
+          docker build -t ghcr.io/tristangle/projetcicd-backend:latest -f ./backend/Dockerfile ./backend
       - name: Build frontend Docker image
         run: |
-          docker build -t ghcr.io/tristangle/projetcicd-frontend:latest -f frontend/Dockerfile frontend
+          docker build -t ghcr.io/tristangle/projetcicd-frontend:latest -f ./frontend/Dockerfile ./frontend
 
       # 5. Connexion à GHCR
       - name: Log in to GHCR
