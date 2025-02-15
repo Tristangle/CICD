@@ -39,11 +39,12 @@ jobs:
           python-version: 3.12
       - name: Run backend tests
         run: |
-          cd backend
-          python -m venv venv
-          source venv/bin/activate
-          pip install -r requirements/dev.txt
-          pytest
+            cd backend
+            python -m venv venv
+            source venv/bin/activate
+            pip install -r requirements/dev.txt
+            pip install pytest 
+            python -m pytest
 
       # 3. Tests unitaires du frontend
       - name: Setup Node.js and run frontend tests
