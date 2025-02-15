@@ -92,3 +92,5 @@ variables :
  - `DB_NAME`: The name of the database
  - `DB_USER`: The user to connect to the database
  - `DB_PASSWORD`: The user's password
+
+test
