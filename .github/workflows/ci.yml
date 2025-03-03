@@ -31,9 +31,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Définir la variable OWNER en minuscules
-      - name: Set lower-case owner
-        run: echo "OWNER=$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
       # 2. Exécuter les tests unitaires du backend via manage.py
       - name: Setup Python and run backend tests
